@@ -1,0 +1,19 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // 1. settings collection for hourly rate, discounts, company contact etc.
+    match /settings/{document} {
+      allow read, write: if true;
+    }
+    
+    // 2. inquiries collection for submitted booking request sheets
+    match /inquiries/{document} {
+      allow read, write: if true;
+    }
+    
+    // 3. gallery collection for real-time reference portfolio with local/web images
+    match /gallery/{document} {
+      allow read, write: if true;
+    }
+  }
+}

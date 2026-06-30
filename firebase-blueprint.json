@@ -1,0 +1,72 @@
+{
+  "entities": {
+    "Setting": {
+      "title": "Setting",
+      "description": "General system configuration for the LifeMyPhotos platform",
+      "type": "object",
+      "properties": {
+        "hourlyPrice": { "type": "number" },
+        "dailyPrice": { "type": "number" },
+        "companyPhone": { "type": "string" },
+        "companyEmail": { "type": "string" },
+        "allowedRegions": { "type": "string" },
+        "kakaoUrl": { "type": "string" },
+        "mainSlogan": { "type": "string" },
+        "dailyDiscountRate": { "type": "number" },
+        "minimumHourlyDuration": { "type": "number" },
+        "maximumRentalDays": { "type": "number" },
+        "woodGuestbookPrice": { "type": "number" },
+        "speakerAmbientPrice": { "type": "number" },
+        "customFilterPrice": { "type": "number" },
+        "extraPaperPrice": { "type": "number" }
+      }
+    },
+    "Inquiry": {
+      "title": "Inquiry",
+      "description": "Reservation inquiry sheets submitted by clients",
+      "type": "object",
+      "properties": {
+        "clientName": { "type": "string" },
+        "phoneNumber": { "type": "string" },
+        "kakaoId": { "type": "string" },
+        "eventDate": { "type": "string" },
+        "eventLocation": { "type": "string" },
+        "eventType": { "type": "string" },
+        "rentalType": { "type": "string" },
+        "rentalDuration": { "type": "number" },
+        "customFrameText": { "type": "string" },
+        "specialRequests": { "type": "string" },
+        "status": { "type": "string" },
+        "createdAt": { "type": "string" },
+        "estimatedPrice": { "type": "number" }
+      }
+    },
+    "GalleryItem": {
+      "title": "GalleryItem",
+      "description": "Reference photos of actual booth installations with customer examples",
+      "type": "object",
+      "properties": {
+        "title": { "type": "string" },
+        "tag": { "type": "string" },
+        "category": { "type": "string" },
+        "imageUrl": { "type": "string" },
+        "ratio": { "type": "string" },
+        "createdAt": { "type": "string" }
+      }
+    }
+  },
+  "firestore": {
+    "settings": {
+      "schema": "Setting",
+      "description": "Holds the general operational prices and administrative contacts"
+    },
+    "inquiries": {
+      "schema": "Inquiry",
+      "description": "Customer rental registration inquiries"
+    },
+    "gallery": {
+      "schema": "GalleryItem",
+      "description": "Customized template design showcase frames and real photobooth machine setup photos"
+    }
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "name": "LifeMyPhotos",
+  "description": "행사가 끝나도 추억은 남습니다 - LifeMyPhotos 셀프 포토부스 렌탈 대여 전문 서비스",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
